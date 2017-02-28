@@ -1,33 +1,29 @@
-# camelgame
 #camel game!
-import random
 print("Welcome to Camel!")
 print("You have stolen a Camel to make your way across the great Mobi Desert.")
 print("The natives want their camel back and they're gonna kill you if they find you")
 print("Survive the journey and outrun the natives.")
-done=bool
-done = false
-you=0
-you=int(you)
-natives=-20
-natives=int(natives)
+done = False
+you=20
+natives=0
 camel=100
-camel=int(camel)
 thirst=100
-thirst=int(thirst)
-if you >= 200:
-    done=true
-    print("You have won the game! You have made it out of the desert! Congrats!")
-if natives >= you:
-    print("The natives have caught up to you, and you are DEAD.")
-    done = true
-if camel == 0:
-    print("Your camel has fallen over and died. You die of heatstroke in the desert.")
-    done=true
-if thirst == 0:
-    print("You have DIED of dehydration. Better luck next time!")
-    done=true
-while done == false:
+if done == True:
+    print("You have finished the game, ethier you've died, or you made it out of the desert. Restart to play again.")
+    
+while done == False:
+    if you >= 200:
+        print("You have won the game! You have made it out of the desert! Congrats!")
+        done=True
+    if natives >= you:
+        print("The natives have caught up to you, and you are DEAD.")
+        done=True
+    if camel == 0:
+        print("Your camel has fallen over and died. You die of heatstroke in the desert.")
+        done=True
+    if thirst == 0:
+        print("You have DIED of dehydration. Better luck next time!")
+        done=True
     print("The desert seems endless, what will you do?")
     print("A. Ride at full speed")
     print("B. Drink some water")
@@ -53,7 +49,7 @@ while done == false:
         you=you+1
         natives=natives+23
         camel=camel+25
-        thirst=thirst-3
+        thirst=thirst+5
     elif choice == "d" or choice == "D":
         print("You ride 15 miles, but you get more thirsty, and your camel loses energy.")
         you=you+15
@@ -64,4 +60,5 @@ while done == false:
         print("You are ", you ," miles out of 200 miles.")
         print("The natives are ", you-natives , "miles away from you")
         print("The camel has ", camel ,"energy out of 100."
-        print("You are ", thirst, "thirst out of 100.")
+        print("You are ", thirst, " thirst out of 100.")
+
