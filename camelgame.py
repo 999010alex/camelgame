@@ -10,7 +10,7 @@ camel=100
 thirst=100
 if done == True:
     print("You have finished the game, ethier you've died, or you made it out of the desert. Restart to play again.")
-    
+    exit()
 while done == False:
     if you >= 200:
         print("You have won the game! You have made it out of the desert! Congrats!")
@@ -34,10 +34,10 @@ while done == False:
     if choice == "A" or choice == "a":
         print("You ride 25 miles. Your camel lost energy, you're slightly more thirsty.")
         you=you+25
-        natives=natives+23
+        natives=natives+18
         camel=camel-20
         thirst=thirst-20
-        
+
     elif choice == "b" or choice == "B":
         print("You drank water, your thirst goes down but the natives are getting closer.")
         you=you+5
@@ -47,18 +47,20 @@ while done == False:
     elif choice == "c" or choice == "C":
         print("You and your camel got some rest, but the natives are getting closer.")
         you=you+1
-        natives=natives+23
+        natives=natives+20
         camel=camel+25
         thirst=thirst+5
     elif choice == "d" or choice == "D":
         print("You ride 15 miles, but you get more thirsty, and your camel loses energy.")
         you=you+15
-        natives=natives+23
+        natives=natives+20
         camel=camel-15
         thirst=thirst-20
     elif choice == "e" or choice == "E":
         print("You are ", you ," miles out of 200 miles.")
         print("The natives are ", you-natives , "miles away from you")
-        print("The camel has ", camel ,"energy out of 100."
+        print("The camel has ", camel ,"energy out of 100.")
         print("You are ", thirst, " thirst out of 100.")
+    else:
+        print("You have a wrong input")
 
