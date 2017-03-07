@@ -1,4 +1,3 @@
-#camel game!
 print("Welcome to Camel!")
 print("You have stolen a Camel to make your way across the great Mobi Desert.")
 print("The natives want their camel back and they're gonna kill you if they find you")
@@ -10,20 +9,23 @@ camel=100
 thirst=100
 if done == True:
     print("You have finished the game, ethier you've died, or you made it out of the desert. Restart to play again.")
-    exit()
 while done == False:
     if you >= 200:
         print("You have won the game! You have made it out of the desert! Congrats!")
         done=True
+        break
     if natives >= you:
         print("The natives have caught up to you, and you are DEAD.")
         done=True
+        break
     if camel == 0:
         print("Your camel has fallen over and died. You die of heatstroke in the desert.")
         done=True
+        break
     if thirst == 0:
         print("You have DIED of dehydration. Better luck next time!")
         done=True
+        break
     print("The desert seems endless, what will you do?")
     print("A. Ride at full speed")
     print("B. Drink some water")
@@ -63,4 +65,6 @@ while done == False:
         print("You are ", thirst, " thirst out of 100.")
     else:
         print("You have a wrong input")
+
+
 
